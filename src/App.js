@@ -2,7 +2,7 @@ import React from "react";
 import preloader from "./images/loading-animation.gif";
 import SignIn from "./SignIn";
 import { ProfileContext } from "./Contexts/ProfileContext";
-import Dashboard from './Dashboard'
+import Dashboard from './Dashboard';
 
 class App extends React.Component {
   state = { signedIn: false, initialized: false, accessToken: "", profile: {} };
@@ -30,10 +30,8 @@ class App extends React.Component {
 
   render() {
     if (this.state.initialized){ 
-        if(this.state.signedIn)
-          return <Dashboard />
-        else
-          return <SignIn />;
+        console.log("yup boy i am here");
+        return <SignIn />;
     }
     else
       return (
